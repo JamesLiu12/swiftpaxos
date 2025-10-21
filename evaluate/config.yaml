@@ -57,9 +57,9 @@ clients:
   alias: client-4
 repo_url: https://github.com/JamesLiu12/swiftpaxos
 repo_path: ~/swiftpaxos/
-branch: main
+branch: master
 working_dir: ~/swiftpaxos/
 nfs_server_path: /exports/paxos
 nfs_client_path: /mnt/nfs/paxos
-test_name: conflict-10
+test_name: conflict-0
 protocol: paxos
