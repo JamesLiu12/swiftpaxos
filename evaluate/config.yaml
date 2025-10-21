@@ -1,0 +1,65 @@
+master:
+  address: 16.162.128.180
+  user: ubuntu
+  identity_file: ~/pem/m/roxwell.pem
+  config_path: local.conf
+servers:
+- address: 13.210.135.140
+  user: ubuntu
+  identity_file: ~/pem/k3/roxwell.pem
+  config_path: local.conf
+  alias: server-3
+- address: 52.78.91.99
+  user: ubuntu
+  identity_file: ~/pem/k2/roxwell.pem
+  config_path: local.conf
+  alias: server-2
+- address: 98.130.81.114
+  user: ubuntu
+  identity_file: ~/pem/k5/roxwell.pem
+  config_path: local.conf
+  alias: server-5
+- address: 54.202.199.50
+  user: ubuntu
+  identity_file: ~/pem/k1/roxwell.pem
+  config_path: local.conf
+  alias: server-1
+- address: 16.62.43.148
+  user: ubuntu
+  identity_file: ~/pem/k4/roxwell.pem
+  config_path: local.conf
+  alias: server-4
+clients:
+- address: 13.210.18.74
+  user: ubuntu
+  identity_file: ~/pem/k3/roxwell.pem
+  config_path: local.conf
+  alias: client-3
+- address: 15.164.65.192
+  user: ubuntu
+  identity_file: ~/pem/k2/roxwell.pem
+  config_path: local.conf
+  alias: client-2
+- address: 16.112.49.76
+  user: ubuntu
+  identity_file: ~/pem/k5/roxwell.pem
+  config_path: local.conf
+  alias: client-5
+- address: 52.43.201.145
+  user: ubuntu
+  identity_file: ~/pem/k1/roxwell.pem
+  config_path: local.conf
+  alias: client-1
+- address: 51.96.165.98
+  user: ubuntu
+  identity_file: ~/pem/k4/roxwell.pem
+  config_path: local.conf
+  alias: client-4
+repo_url: https://github.com/JamesLiu12/swiftpaxos
+repo_path: ~/swiftpaxos/
+branch: main
+working_dir: ~/swiftpaxos/
+nfs_server_path: /exports/paxos
+nfs_client_path: /mnt/nfs/paxos
+test_name: conflict-10
+protocol: paxos
