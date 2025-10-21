@@ -179,12 +179,12 @@ func (c *Client) SendProposal(cmd defs.Propose) {
 	}
 
 	if !c.Fast {
-		c.Println("sending command", cmd.CommandId, "to", d)
+		// c.Println("sending command", cmd.CommandId, "to", d)
 		c.writers[d].WriteByte(defs.PROPOSE)
 		cmd.Marshal(c.writers[d])
 		c.writers[d].Flush()
 	} else {
-		c.Println("sending command", cmd.CommandId, "to everyone")
+		// c.Println("sending command", cmd.CommandId, "to everyone")
 		for rep := 0; rep < len(c.servers); rep++ {
 			if c.writers[rep] != nil {
 				c.writers[rep].WriteByte(defs.PROPOSE)

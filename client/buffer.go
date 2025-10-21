@@ -106,8 +106,8 @@ func (c *BufferClient) Loop() {
 			if i != 0 {
 				d := r.Time.Sub(c.reqTime[r.Seqnum])
 				m := float64(d.Nanoseconds()) / float64(time.Millisecond)
-				c.Println("Returning:", r.Val.String())
-				c.Printf("latency %v\n", m)
+				// c.Println("Returning:", r.Val.String())
+				c.Printf("%v\n", m)
 			}
 			if c.window > 0 {
 				cmdM.Lock()
